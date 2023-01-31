@@ -3,7 +3,8 @@
 ### API on es gestiona un joc de daus, amb usuaris i partides dels usuaris amb base de dades relacional(MySQL)<br>
 ### La seguretat s'implementa amb JSON Web Token.
 
-L'API es consumeix en el front amb l'aplicació joc_daus_app, feta amb Angular
+#### L'API es consumeix en el front amb l'aplicació joc_daus_app, feta amb Angular
+
 
 URLs:
 http://localhost:9001/players  Un jugador es pot inscriure amb el seu nom o de forma anònima
