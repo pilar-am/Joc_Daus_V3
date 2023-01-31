@@ -1,0 +1,17 @@
+<div class="row">
+  <ng-container *ngIf="partidesUsuari !=null">
+    <div class="col-lg-4 mb-4" *ngFor='let partida of partidesUsuari let i=index;'>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">PARTIDA {{i+1}}</h5>
+          <p>Tirada 1:  {{partida.tirada1}} </p>
+          <p>Tirada 2:  {{partida.tirada2}} </p>
+          <p><strong>Puntuación:  {{partida.puntuacio}}</strong></p>
+          <div *ngIf="partida.puntuacio == 7">
+            <h6 class="color">PARTIDA GANADA</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

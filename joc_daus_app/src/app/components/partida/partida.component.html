@@ -1,0 +1,23 @@
+<div class="padding">
+  <div *ngIf="!resultado">
+    <h1>LANZA LOS DADOS</h1>
+    <div class="margin">
+      <button class="btn boton" (click)="lanzarDados()">lanza</button>
+      <img src="../../../assets/dados_2.gif" height="150px">
+    </div>
+  </div>
+
+  <div *ngIf="resultado">
+    <h2>RESULTADO</h2>
+    <div class="card p-6">
+      <p><strong>Tirada   1:  {{partidaActualizada.tirada1}}</strong></p>
+      <p><strong>Tirada   2: {{partidaActualizada.tirada2}}</strong></p>
+      <p><strong>Resultado:   {{partidaActualizada.puntuacio}}</strong></p>
+      <div *ngIf="partidaActualizada.puntuacio == 7">
+        <h5 class="color">¡¡¡HAS GANADO!!!</h5>
+      </div>
+    </div>
+    <button class="btn boton" (click)="volverJugar()">Volver a jugar</button>
+  </div>
+</div>
+

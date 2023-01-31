@@ -1,0 +1,36 @@
+  <div *ngIf="token !=null" class="container">
+    <div class="row mt-5 margin">
+      <h1 class="mb-4">Perfil </h1>
+      <div class="col-lg-3 col-md-3 col-sm-12 border me-2 p-5" >
+        <p><a (click)="jugarPartida()"> * Juega una partida</a></p>
+        <p><a (click)="mostrarPartides()"> * Partidas guardadas</a></p>
+        <p><a (click)="editarPerfil()"> * Editar perfil</a></p>
+        <p><a (click)="eliminarPartidas()"> * Eliminar partidas</a></p>
+        <p><a (click)="mostrarRanking()"> * Mostrar ranking</a></p>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-12">
+        <div *ngIf="jugarpartida">
+          <app-partida></app-partida>
+        </div>
+        <div *ngIf="mostrarpartides">
+          <app-mostrar-partides></app-mostrar-partides>
+        </div>
+        <div *ngIf="editarperfil">
+          <app-editar-perfil></app-editar-perfil>
+        </div>
+        <div *ngIf="mostrarranking">
+          <app-usuaris-ranking></app-usuaris-ranking>
+        </div>
+      </div>
+    </div>
+  </div>
+<div *ngIf="token == null">
+  <div class="row">
+    <div class="col-5 mt-7 margin margin-top centrar">
+      <h1 class="mb-4 titulo">NO TIENES PERMISOS, LOGUÉATE O REGÍSTRATE</h1>
+      <button class="btn btn-block create-account colour" routerLink="/login">
+        Loguin
+      </button>
+    </div>
+  </div>
+</div>

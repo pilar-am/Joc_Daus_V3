@@ -1,0 +1,16 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Puntuación</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">% Partidas ganadas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuari of usuaris; let i=index">
+      <th scope="row">{{i + 1}}</th>
+      <td >{{usuari.nom}}</td>
+      <td>{{usuari.ranking}}  %</td>
+    </tr>
+  </tbody>
+</table>

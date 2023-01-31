@@ -1,0 +1,40 @@
+
+<div *ngIf="token !=null" class="container">
+  <div class="row-6 margenes">
+    <table class="table table-hover">
+      <thead>
+        <tr class="background">
+          <th scope="col">Puntuación</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">% Partidas ganadas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuari of usuaris; let i=index">
+          <th scope="row">{{i + 1}}</th>
+          <td>{{usuari.nom}}</td>
+          <td>{{usuari.ranking}}  %</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row-9">
+    <div class="card">
+      <h2>Ranking usuario: Te encuentras en la posición {{posicion}}</h2>
+      <h5>En primera posición: {{ganador.nom}} con el {{ganador.ranking}} %</h5>
+      <h5>En última posición: {{perdedor.nom}} con el {{perdedor.ranking}} % </h5>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="token == null">
+  <div class="row">
+    <div class="col-5 mt-7 margin margin-top centrar">
+      <h1 class="mb-4 titulo">NO TIENES PERMISOS, LOGUÉATE O REGÍSTRATE</h1>
+      <button class="btn btn-block create-account colour" routerLink="/login">
+        Loguin
+      </button>
+    </div>
+  </div>
+
+

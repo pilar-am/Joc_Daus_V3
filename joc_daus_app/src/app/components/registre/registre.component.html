@@ -1,0 +1,32 @@
+
+<div class="background" style="
+background-image: url('../assets/dados3.jpg');
+background-size: cover;
+background-repeat:no-repeat;
+background-position: center;">
+<div class="registration-form">
+  <form class="margin-bottom" #formDatos="ngForm" [formGroup]="userForm">
+      <div class="form-icon">
+          <span><i class="icon icon-user"></i></span>
+          <p>Registro</p>
+      </div>
+      <p>(Puedes crearte una cuenta anónima si le das al botón "Crear cuenta" sin escribir un nombre)</p>
+      <div class="form-group">
+          <input type="text" class="form-control item" id="username" placeholder="Nombre" formControlName="nom">
+      </div>
+      <div class="form-group">
+          <input type="password" class="form-control item" id="password" placeholder="Contraseña" formControlName="password">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control item" id="password2" placeholder="Confirmar contraseña" formControlName="confPassword">
+      </div>
+      <div class="form-group">
+          <input type="text" class="form-control item" id="email" placeholder="Email" formControlName="email">
+      </div>
+      <div class="form-group">
+          <button type="button" class="btn btn-block create-account" (click)="registrarUsuari()">Crear cuenta</button>
+      </div>
+      <p>¿Ya estás registrado?<a routerLink="/login" style="cursor:pointer;">Accede</a></p>
+  </form>
+</div>
+</div>
