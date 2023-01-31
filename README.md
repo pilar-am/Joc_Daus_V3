@@ -4,7 +4,7 @@
 ### La seguretat s'implementa amb JSON Web Token.
 
 #### L'API es consumeix en el front amb l'aplicació joc_daus_app, feta amb Angular
-<br><br>
+<br>
 
 URLs:
 http://localhost:9001/players  Un jugador es pot inscriure amb el seu nom o de forma anònima<br>
@@ -18,5 +18,5 @@ http://localhost:9001/players/ranking/winner Retorna el jugador/a  amb millor 
 http://localhost:9001/players/{id} Modifica el nom del jugador<br>
 
 
-Instal.lació aplicació frontend:  npm install
+Instal.lació aplicació frontend:  npm install<br>
 Execució aplicació frontend: ng serve -o
